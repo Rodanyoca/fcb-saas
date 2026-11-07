@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: ".next-fcb",
+  distDir: process.env.VERCEL === "1" ? ".next" : ".next-fcb",
   images: {
     unoptimized: true,
   },
